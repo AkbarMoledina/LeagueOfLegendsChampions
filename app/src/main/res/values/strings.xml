@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">League Companion</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+
+    <!--Strings regarding getting information about champions,
+    including which champions are on free rotation-->
+    <string name="free_week">Free Week Champions</string>
+    <string name="champions">Champions</string>
+
+    <!--Strings regarding getting information about a particular summoner-->
+    <string name="summoner_name">Summoner Name</string>
+    <string name="search_summoner">Search Summoner</string>
+    <string name="recently_viewed">Recently Viewed</string>
+    <string name="summoner_mastery">Summoner Mastery</string>
+    <string name="summoner_ranks">Ranks</string>
+
+    <!--Items, Runes and Summoner Spells-->
+    <string name="items">Items</string>
+    <string name="runes">Runes</string>
+    <string name="summoner_spells">Summoner Spells</string>
+
+    <!--In-game match data-->
+    <string name="current_game">Current Game</string>
+    <string name="recent_games">Recent Games</string>
+    <string name="match_timeline">Match Timeline</string>
+</resources>
