@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import android.widget.Toast;
 
+import com.akbar26.leaguecompanion.InfoList;
+
 public class MainActivity extends AppCompatActivity {
     public static TextView champions;
     @Override
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         FetchData process = new FetchData();
         process.execute();
 
-        ArrayList x = new ArrayList<Word>();
+        final ArrayList x = new ArrayList<Word>();
         x.add(new Word("Kassadin", "The Void Walker"));
         x.add(new Word("Karthus", "The Deathsinger"));
         x.add(new Word("Lee Sin", "The Blind Monk"));
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         x.add(new Word("Sivir", "The Battle Mistress"));
         x.add(new Word("Kha'Zix", "The Voidreaver"));
 
+        ArrayList a = new ArrayList<Word>();
+        a = InfoList.getmKeyList();
+
         ListAdapter adapter = new ListAdapter(this, x);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);
@@ -46,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    String championName = String.valueOf(parent.getItemAtPosition(position));
+                    String championName = ((Word)x.get(position)).getmChampionName();
                     Toast.makeText(MainActivity.this, championName, Toast.LENGTH_LONG).show();
                     Intent championsIntent = new Intent(MainActivity.this, Champions.class);
                     startActivity(championsIntent);

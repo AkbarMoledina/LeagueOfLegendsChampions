@@ -2,6 +2,7 @@ package com.akbar26.leaguecompanion;
 
 import android.os.AsyncTask;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,7 +31,7 @@ public class FetchData extends AsyncTask<Void, Void, List<String>> {
     @Override
     protected List<String> doInBackground(Void... params) {
         try {
-            String apikey = "RGAPI-2bdbbf2e-6590-4ffd-ab87-0a78299356b0";
+            String apikey = "RGAPI-97022a3e-87cc-4650-b40b-d9fcf4b26188";
             URL url = new URL("https://euw1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false&api_key=" + apikey);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
@@ -40,7 +41,6 @@ public class FetchData extends AsyncTask<Void, Void, List<String>> {
             JSONObject jo = joOuter.getJSONObject("data");
 
             Iterator keysToCopyIterator = jo.keys();
-
             while(keysToCopyIterator.hasNext()) {
                 String keyValue = (String) keysToCopyIterator.next();
                 keysList.add(keyValue);
@@ -57,7 +57,14 @@ public class FetchData extends AsyncTask<Void, Void, List<String>> {
 //                JSONObject championInfo = jo.getJSONObject((String) keyValues.get(i));
 //                println(String.valueOf(championInfo));
 //            }
-            int n = 1;
+
+///////////////
+//            JSONObject objJson=jo.getJSONObject("Jax");
+/////////////
+            InfoList keys = new InfoList();
+            keys.setmKeyList(keysList);
+            InfoList info = new InfoList();
+            info.setmChampionInfo(jo);
 
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
@@ -66,6 +73,7 @@ public class FetchData extends AsyncTask<Void, Void, List<String>> {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         return keysList;
 }
 

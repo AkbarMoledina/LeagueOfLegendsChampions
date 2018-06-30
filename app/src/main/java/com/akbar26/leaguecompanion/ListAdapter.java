@@ -41,31 +41,6 @@ public class ListAdapter extends ArrayAdapter<Word> {
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
         titleTextView.setText(currentWord.getmChampionTitle());
 
-//        Context appContext = getContext();
-//        listItemView.setOnClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position,
-//                                    long id) {
-//
-//                String item = ((TextView)view).getText().toString();
-//
-//                Toast.makeText(, item, Toast.LENGTH_LONG).show();
-
-//            }
-//        });
-
-
-//        listItemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent championsIntent = new Intent(MainActivity.this, Champions.class);
-//                startActivity(championsIntent);
-//            }
-//        });
-//        TextView x = (TextView) listItemView.findViewById(R.id.list_item);
-
-
-
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.
         return listItemView;

@@ -39,7 +39,7 @@
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/textView" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="100dp"
