@@ -39,7 +39,7 @@ public class FetchData{
         }
 
         try {
-            String apikey = "RGAPI-1420da60-e73d-4487-8f60-8283772c540d";
+            String apikey = "RGAPI-9d95f835-d3d5-4fc7-b546-515655aa0dbc";
             URL url = new URL("https://euw1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false&api_key=" + apikey);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 //            URLConnection connection = (URLConnection) url.openConnection();

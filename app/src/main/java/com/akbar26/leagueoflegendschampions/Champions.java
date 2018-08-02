@@ -19,7 +19,7 @@ public class Champions extends AppCompatActivity {
         int position = InfoList.getmPosition();
         ArrayList<String> nameAndTitle = InfoList.getmNameAndTitle();
 
-        Object champion = new Object();
+        Object champion;
         champion = nameAndTitle.get(position);
         String championName = ((Word)champion).getmChampionName();
         String championTitle = ((Word)champion).getmChampionTitle();
