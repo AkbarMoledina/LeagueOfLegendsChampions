@@ -8,7 +8,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by akbar on 29/05/2018.
+ * Gets the position of the list item that was clicked.
+ * Gets name and title for that position, and displays the information in the layout template.
  */
 
 public class Champions extends AppCompatActivity {

@@ -22,6 +22,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Sets the activity_main layout.
+ * Runs code stored within FetchData.java to get required information from the API.
+ * Sets arrays of the name and the title of each champion using the Word class.
+ * Passes the name and the title through to the custom ArrayAdapter (ListAdapter).
+ * When a list item is clicked, open the Champions Activity and pass what was clicked through.
+ */
+
 public class MainActivity extends AppCompatActivity {
     public static TextView champions;
     @Override

@@ -4,6 +4,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+/**
+ * Setters and Getters related to the JSON obtained from the Riot Games API
+ */
+
 public class InfoList {
 
     private static ArrayList<String> mKeyList;

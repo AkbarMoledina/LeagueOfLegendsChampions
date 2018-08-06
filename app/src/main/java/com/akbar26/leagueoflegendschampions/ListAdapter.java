@@ -14,6 +14,10 @@ import java.util.List;
 import android.content.Intent;
 import android.widget.Toast;
 
+/**
+ * Custom ArrayAdapter to support two lists of words.
+ */
+
 public class ListAdapter extends ArrayAdapter<Word> {
 
 
